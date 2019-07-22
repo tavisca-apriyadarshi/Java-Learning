@@ -23,11 +23,11 @@ public class Queuing <T> {
             System.out.println("Queue Capacity Full");
     }
 
-    public void remove(){
+    public String remove(){
         if(queue.size()>0)
-            queue.remove(0);
+            return ""+queue.remove(0);
         else
-            System.out.println("Queue Capacity already empty");
+            return "Queue Capacity already empty";
     }
 
     public ArrayList<T> GetQueue(){
@@ -42,14 +42,22 @@ public class Queuing <T> {
         for(int i=0; i<5; i++){
             forSuppliedSize.add(i);
         }
+        System.out.println();
         for (int i=0; i<3; i++)
-            forSuppliedSize.remove();
+            System.out.println(forSuppliedSize.remove());
+
+        System.out.println();
 
         for(Object items: forSuppliedSize.GetQueue()){
             System.out.println(items);
         }
+
+        System.out.println();
         for (int i=0; i<3; i++)
-            forSuppliedSize.remove();
+            System.out.println(forSuppliedSize.remove());
+
+        System.out.println();
+        
         for(int i=0; i<6; i++){
             forSuppliedSize.add(i);
         }
