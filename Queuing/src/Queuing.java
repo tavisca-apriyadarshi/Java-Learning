@@ -57,7 +57,7 @@ public class Queuing <T> {
             System.out.println(forSuppliedSize.remove());
 
         System.out.println();
-        
+
         for(int i=0; i<6; i++){
             forSuppliedSize.add(i);
         }
